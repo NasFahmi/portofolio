@@ -1,4 +1,4 @@
-
+import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
         <div className="max-w-screen-lg mx-auto">
           <Navbar />
           <Hero />
+          <About />
         </div>
       </div>
     </main>

@@ -7,12 +7,15 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors:{
+    colors: {
       transparent: 'transparent',
       current: 'currentColor',
       'bg-primary': '#020617',
       'highlight-job': '#7363EF',
       'btn-primary': '#0C0E23',
+      'btn-primary-hover': '#0A0B1C',
+      'btn-secoundary': '#161A31',
+      'btn-secoundary-hover': '#121527',
       'text-primary': '#F0F3FF',
       'text-secoundary': '#C1C2D3',
       'stroke-btn': '#313555',
@@ -27,6 +30,13 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        '16': 'repeat(16, minmax(0, 1fr))',
+      },
+      gridTemplateRows: {
+        '16': 'repeat(16, minmax(0, 1fr))',
+      }
     },
   },
   plugins: [],
