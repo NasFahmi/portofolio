@@ -2,9 +2,10 @@ import bgFrame from "@/public/bg-frame.png";
 import iconArrowUp from "@/public/ic_arrow_up.png";
 import Image from "next/image";
 import { dataContact } from "@/data/contact";
+import Footer from "./Footer";
 export default function GetInTouch() {
   return (
-    <div className="mt-[100px] px-5">
+    <div className="mt-[100px] px-5" id="contact">
       <div
         className=""
         style={{
@@ -76,6 +77,7 @@ export default function GetInTouch() {
           </div>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }

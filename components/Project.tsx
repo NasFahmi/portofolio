@@ -3,7 +3,7 @@ import CardProject from "./CardProject";
 
 export default function Project() {
   return (
-    <div className="mt-[100px] px-5">
+    <div className="mt-[100px] px-5" id="project">
       <h1 className="text-3xl font-semibold text-center text-text-primary">
         {dataProject.title}
       </h1>

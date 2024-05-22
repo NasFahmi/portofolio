@@ -3,7 +3,7 @@ import icVerified from "@/public/ic_verified.png";
 import Image from "next/image";
 export default function Skill() {
   return (
-    <div className="mt-[100px] px-5">
+    <div className="mt-[100px] px-5" id="skill">
       <h1 className="text-3xl font-semibold text-center text-text-primary">
         {dataskill.title}
       </h1>
@@ -13,11 +13,11 @@ export default function Skill() {
           <div className="mb-7">
             <h1 className="text-center md:text-sm">Frontend Developer</h1>
           </div>
-          <div className="grid  grid-cols-2 gap-3 ">
+          <div className="grid grid-cols-2 gap-3 ">
             {dataskill.frontend.map((item, index) => (
               <div
                 key={index}
-                className="ml-8 md:ml-2 flex justify-start items-start gap-3"
+                className="flex items-start justify-start gap-3 ml-8 md:ml-2"
               >
                 <Image
                   src={icVerified}
@@ -42,11 +42,11 @@ export default function Skill() {
           <div className="mb-7">
             <h1 className="text-center md:text-sm">Backend Developer</h1>
           </div>
-          <div className="grid  grid-cols-2 gap-3 ">
+          <div className="grid grid-cols-2 gap-3 ">
             {dataskill.backend.map((item, index) => (
               <div
                 key={index}
-                className="ml-8 md:ml-2 flex justify-start items-start gap-3"
+                className="flex items-start justify-start gap-3 ml-8 md:ml-2"
               >
                 <Image
                   src={icVerified}
@@ -71,11 +71,11 @@ export default function Skill() {
           <div className="mb-7">
             <h1 className="text-center md:text-sm">Other Tech</h1>
           </div>
-          <div className="grid  grid-cols-2 gap-3 ">
+          <div className="grid grid-cols-2 gap-3 ">
             {dataskill.other_tech.map((item, index) => (
               <div
                 key={index}
-                className="ml-8 md:ml-2 flex justify-start items-start gap-3"
+                className="flex items-start justify-start gap-3 ml-8 md:ml-2"
               >
                 <Image
                   src={icVerified}

@@ -8,53 +8,47 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Hero() {
   return (
-    <div className="mt-[50px] px-5">
-      <div className="flex flex-col md:flex-row-reverse justify-center items-center">
-        <div className="flex flex-1 justify-center items-center">
-          <div
-            className="absolute left-4 flex flex-col justify-center items-center gap-10
-                    md:hidden"
-          >
+    <div className="mt-[50px] px-5" id="home">
+      <div className="flex flex-col items-center justify-center md:flex-row-reverse">
+        <div className="flex items-center justify-center flex-1">
+          <div className="absolute flex flex-col items-center justify-center gap-10 left-4 md:hidden">
             <Link
-              href={dataHero.social_media.instagram}
+              href="https://www.instagram.com/nasrlfahmi/"
               className="flex flex-col items-center justify-center"
             >
               <Image src={iconInstagram} alt="person" className="h-auto w-11" />
             </Link>
             <Link
-              href={dataHero.social_media.linkedin}
+              href="https://www.linkedin.com/in/nasrul-fahmi-1015191b1/"
               className="flex flex-col items-center justify-center"
             >
-              <Image src={iconLingkedin} alt="person" className="h-auto w-10" />
+              <Image src={iconLingkedin} alt="person" className="w-10 h-auto" />
             </Link>
             <Link
-              href={dataHero.social_media.github}
+              href="https://github.com/NasFahmi"
               className="flex flex-col items-center justify-center"
             >
-              <Image src={iconGithub} alt="person" className="h-auto w-10" />
+              <Image src={iconGithub} alt="person" className="w-10 h-auto" />
             </Link>
           </div>
           <Image src={imagePerson} alt="person" className="h-auto w-[400px] " />
         </div>
-        <div className="flex-1 md:grid md:grid-cols-10 md:gap-4 justify-center items-center">
-          <div
-            className="left-4 md:col-span-1 flex flex-col justify-center items-center gap-8 hidden
-                    md:flex"
-          >
+        <div className="items-center justify-center flex-1 md:grid md:grid-cols-10 md:gap-4">
+          <div className="flex flex-col items-center justify-center hidden gap-8 left-4 md:col-span-1 md:flex">
             <Link
-              href={dataHero.social_media.instagram}
+              href="https://www.instagram.com/nasrlfahmi/"
               className="flex flex-col items-center justify-center"
             >
-              <Image src={iconInstagram} alt="person" className="h-auto w-8" />
+              <Image src={iconInstagram} alt="person" className="w-8 h-auto" />
             </Link>
             <Link
-              href={dataHero.social_media.linkedin}
+              href="https://www.linkedin.com/in/nasrul-fahmi-1015191b1/"
               className="flex flex-col items-center justify-center"
             >
               <Image src={iconLingkedin} alt="person" className="h-auto w-7" />
             </Link>
             <Link
-              href={dataHero.social_media.github}
+              href="https://github.com/NasFahmi"
               className="flex flex-col items-center justify-center"
             >
               <Image src={iconGithub} alt="person" className="h-auto w-7" />
@@ -62,10 +56,10 @@ export default function Hero() {
           </div>
           <div className="md:col-span-9">
             <h1 className="text-center md:text-left">Hello, I am</h1>
-            <h1 className="text-2xl text-text-primary font-bold text-center md:text-left md:text-3xl">
+            <h1 className="text-2xl font-bold text-center text-text-primary md:text-left md:text-3xl">
               {dataHero.title}
             </h1>
-            <div className="flex justify-center items-center gap-4 mt-2 md:justify-start">
+            <div className="flex items-center justify-center gap-4 mt-2 md:justify-start">
               <div className="w-[100px] h-1 rounded-full bg-text-primary"></div>
               <p className="text-center text-[#9690F5] text-nowrap">
                 {dataHero.jobs}
@@ -79,7 +73,7 @@ export default function Hero() {
             </div>
             <Link href={"#project"}>
               <div className=" w-full px-[1px] py-[1px] bg-gradient-to-br from-gradient-btn-light to-gradient-btn-dark border-1 rounded-lg mt-5 md:max-w-80">
-                <div className="py-3 w-full bg-btn-primary rounded-lg flex justify-center items-center md:max-w-80 hover:bg-btn-primary-hover duration-300 ease-in-out">
+                <div className="flex items-center justify-center w-full py-3 duration-300 ease-in-out rounded-lg bg-btn-primary md:max-w-80 hover:bg-btn-primary-hover">
                   <p className="text-sm">{dataHero.cta_project}</p>
                   <Image
                     src={iconArrowUp}

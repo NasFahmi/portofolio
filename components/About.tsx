@@ -9,7 +9,7 @@ import icProject from "@/public/ic_briftcase.png";
 import icProgress from "@/public/ic_progress.png";
 export default function About() {
   return (
-    <div id="About" className="px-5 mt-[100px] mb-[100px]">
+    <div id="about" className="px-5 mt-[100px] mb-[100px]">
       <h1 className="text-3xl font-semibold text-center text-text-primary">
         {dataAbout.title}
       </h1>
