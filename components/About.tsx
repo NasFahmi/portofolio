@@ -9,33 +9,37 @@ import icProject from "@/public/ic_briftcase.png";
 import icProgress from "@/public/ic_progress.png";
 export default function About() {
   return (
-    <div className="mt-[100px] mb-[100px]">
+    <div id="About" className="px-5 mt-[100px] mb-[100px]">
       <h1 className="text-3xl font-semibold text-center text-text-primary">
         {dataAbout.title}
       </h1>
       <h1 className="text-center text-text-secoundary">{dataAbout.subtitle}</h1>
       <div className="mt-[50px]">
-        <div className="grid grid-cols-16 gap-10 grid-rows-[50px_minmax(25px,_1fr)_100px] ">
-          <div className="relative col-span-9 overflow-hidden border row-span-7 border-stroke-btn bg-bg-primary rounded-2xl">
-            <div className="absolute inset-0 z-10 flex items-end justify-start px-10 py-5 font-semibold">
+        <div className="md:grid flex flex-col md:grid-cols-16 gap-10 md:grid-rows-[50px_minmax(25px,_1fr)_100px] ">
+          <div
+            className="h-64 border md:h-auto md:col-span-9 md:row-span-7 border-stroke-btn bg-bg-primary rounded-2xl"
+            style={{
+              backgroundImage: `url(${imageCard.src})`,
+              backgroundPosition: "center",
+              backgroundSize: "fill",
+              backgroundRepeat: "no-repeat",
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "start",
+            }}
+          >
+            <div className="flex items-end justify-start px-10 py-5 font-semibold">
               <p className="text-3xl text-text-primary ">
                 {dataAbout.card.card_team}
               </p>
             </div>
-            <Image
-              src={imageCard}
-              alt=""
-              layout="fill"
-              objectFit="cover"
-              className="rounded-2xl"
-            />
           </div>
-          <div className="h-full col-span-7 row-span-4 py-8 border min-h-10 px-7 bg-bg-primary border-stroke-btn rounded-2xl">
+          <div className="h-full py-8 border md:col-span-7 md:row-span-4 min-h-10 px-7 bg-bg-primary border-stroke-btn rounded-2xl">
             <p className="text-sm text-text-primary ">
               {dataAbout.card.card_introduction}
             </p>
           </div>
-          <div className="relative flex items-center justify-center h-full col-span-7 row-span-3 py-8 border px-7 min-h-10 bg-bg-primary border-stroke-btn rounded-2xl">
+          <div className="relative flex items-center justify-center h-full py-8 border md:col-span-7 md:row-span-3 px-7 min-h-10 bg-bg-primary border-stroke-btn rounded-2xl">
             <Image
               src={imageSectionInput}
               alt=""
@@ -64,30 +68,45 @@ export default function About() {
           </div>
           <div className="flex items-center justify-center col-span-10 row-span-2 gap-10 py-8 border min-h-10 px-7 bg-bg-primary border-stroke-btn rounded-2xl">
             <div className="flex flex-col items-center justify-center ">
-              <Image src={icExperience} alt="" className="w-12 h-auto mb-5" />
-              <h1 className="mb-2 text-text-primary">
+              <Image
+                src={icExperience}
+                alt=""
+                className="h-auto mb-5 md:w-12 w-9"
+              />
+              <h1 className="mb-2 text-sm text-center text-text-primary md:text-base">
                 {dataAbout.card.card_experience.section_experience.title}
               </h1>
-              <p className="text-text-secoundary">
+              <p className="text-xs text-center text-text-secoundary md:text-sm">
                 {dataAbout.card.card_experience.section_experience.subtitle}
               </p>
             </div>
             <div className="flex flex-col items-center justify-center ">
-              <Image src={icProject} alt="" className="w-12 h-auto mb-5" />
-              <h1 className="mb-2 text-text-primary">
-                {dataAbout.card.card_experience.section_experience.title}
+              <Image
+                src={icProject}
+                alt=""
+                className="h-auto mb-5 md:w-12 w-9"
+              />
+              <h1 className="mb-2 text-sm text-center text-text-primary md:text-base">
+                {dataAbout.card.card_experience.section_project.title}
               </h1>
-              <p className="text-text-secoundary">
-                {dataAbout.card.card_experience.section_experience.subtitle}
+              <p className="text-xs text-center text-text-secoundary md:text-sm">
+                {dataAbout.card.card_experience.section_project.subtitle}
               </p>
             </div>
             <div className="flex flex-col items-center justify-center ">
-              <Image src={icProgress} alt="" className="w-12 h-auto mb-5" />
-              <h1 className="mb-2 text-text-primary">
-                {dataAbout.card.card_experience.section_experience.title}
+              <Image
+                src={icProgress}
+                alt=""
+                className="h-auto mb-5 md:w-12 w-9"
+              />
+              <h1 className="mb-2 text-sm text-center text-text-primary md:text-base ">
+                {dataAbout.card.card_experience.section_project_complete.title}
               </h1>
-              <p className="text-text-secoundary">
-                {dataAbout.card.card_experience.section_experience.subtitle}
+              <p className="text-xs text-center text-text-secoundary md:text-sm">
+                {
+                  dataAbout.card.card_experience.section_project_complete
+                    .subtitle
+                }
               </p>
             </div>
           </div>

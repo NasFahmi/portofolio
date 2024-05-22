@@ -9,14 +9,14 @@ export default function Navbar() {
 
   return (
     <div className="flex flex-col px-5">
-      <div className="flex justify-center items-center">
+      <div className="flex items-center justify-center ">
         <div className="px-[2px] py-[2px] bg-gradient-to-br from-gradient-btn-light to-gradient-btn-dark border-1 rounded-xl mt-5">
-          <div className="px-8 py-6 bg-btn-primary rounded-xl relative">
-            <ul className="flex justify-center items-center gap-5 font-medium">
+          <div className="relative px-8 py-6 bg-btn-primary rounded-xl">
+            <ul className="flex items-center justify-center gap-5 font-medium">
               {dataNavbar.map((item, index) => (
                 <li
                   key={index}
-                  className="flex justify-center flex-col items-center"
+                  className="flex flex-col items-center justify-center"
                   // Tambahkan onClick untuk mengatur menu aktif
                   onClick={() => setActiveMenu(index)}
                 >
@@ -33,7 +33,7 @@ export default function Navbar() {
                   </Link>
                   {/* Hanya tampilkan lingkaran jika menu ini aktif */}
                   {activeMenu === index && (
-                    <div className="transition-opacity absolute bottom-4 w-2 h-2 bg-text-primary rounded-full"></div>
+                    <div className="absolute w-2 h-2 transition-opacity rounded-full bottom-4 bg-text-primary"></div>
                   )}
                 </li>
               ))}
