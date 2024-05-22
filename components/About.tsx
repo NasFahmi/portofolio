@@ -1,3 +1,4 @@
+"use client";
 import { dataAbout } from "@/data/about";
 import imageCard from "@/public/image_card.png";
 import imageSectionInput from "@/public/image_section_input.png";
@@ -7,7 +8,22 @@ import imageDownload from "@/public/ic_download.png";
 import icExperience from "@/public/ic_badge.png";
 import icProject from "@/public/ic_briftcase.png";
 import icProgress from "@/public/ic_progress.png";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export default function About() {
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("75nasrulfahmi@gmail.com").then(
+      () => {
+        console.log("Email copied to clipboard!");
+        toast.success("Email copied to clipboard!");
+        // You can add a toast notification or any visual feedback here
+      },
+      (err) => {
+        toast.error("Failed to copy email.");
+        console.error("Could not copy text: ", err);
+      }
+    );
+  };
   return (
     <div id="about" className="px-5 mt-[100px] mb-[100px]">
       <h1 className="text-3xl font-semibold text-center text-text-primary">
@@ -46,7 +62,10 @@ export default function About() {
               className="absolute bottom-0 w-36 right-10"
             />
             <div className="flex flex-col items-center justify-center gap-2">
-              <div className="flex items-center justify-center gap-2 p-4 py-3 duration-300 ease-in-out rounded-lg cursor-pointer w-fit bg-btn-secoundary hover:bg-btn-secoundary-hover">
+              <div
+                className="flex items-center justify-center gap-2 p-4 py-3 duration-300 ease-in-out rounded-lg cursor-pointer w-fit bg-btn-secoundary hover:bg-btn-secoundary-hover"
+                onClick={handleCopyEmail}
+              >
                 <Image src={icCopy} alt="" className="w-3" />
                 <p className="text-sm">
                   {dataAbout.card.card_project.cta_email}
@@ -112,6 +131,17 @@ export default function About() {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={true}
+        newestOnTop={true}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        theme="dark"
+      />
     </div>
   );
 }
