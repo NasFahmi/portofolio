@@ -7,8 +7,8 @@ export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState(0);
 
   useEffect(() => {
-    const handleScroll = (entries: any) => {
-      entries.forEach((entry: any) => {
+    const handleScroll = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const index = dataNavbar.findIndex(
             (item) => item.toLowerCase() === entry.target.id.toLowerCase()

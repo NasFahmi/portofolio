@@ -30,6 +30,10 @@ export const dataskill = {
       tech: "Tailwind",
       level: "intermediate",
     },
+    {
+      tech: "Flutter",
+      level: "Intermediate",
+    },
   ],
   backend: [
     {
@@ -61,10 +65,6 @@ export const dataskill = {
     {
       tech: "Docker",
       level: "intermediate",
-    },
-    {
-      tech: "Nginx",
-      level: "Basic",
     },
   ],
 };
