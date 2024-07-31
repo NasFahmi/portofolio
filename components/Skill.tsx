@@ -3,7 +3,7 @@ import icVerified from "@/public/ic_verified.png";
 import Image from "next/image";
 export default function Skill() {
   return (
-    <div className="mt-[100px] px-5" id="skill">
+    <div className="mt-[100px] px-5 bg-bg-primary" id="skill">
       <h1 className="text-3xl font-semibold text-center text-text-primary">
         {dataskill.title}
       </h1>
@@ -11,7 +11,7 @@ export default function Skill() {
       <div className="mt-[50px] flex justify-center items-center flex-col gap-10 md:flex-row md:items-start">
         <div className="w-full md:h-[280px] p-6 h-auto bg-bg-primary border-stroke-btn rounded-2xl">
           <div className="mb-7">
-            <h1 className="text-center md:text-sm">Frontend Developer</h1>
+            <h1 className="text-center text-text-primary md:text-sm">Frontend Developer</h1>
           </div>
           <div className="grid grid-cols-2 gap-3 ">
             {dataskill.frontend.map((item, index) => (
@@ -40,7 +40,7 @@ export default function Skill() {
         </div>
         <div className="w-full md:h-[280px] p-6 h-auto bg-bg-primary border-stroke-btn rounded-2xl">
           <div className="mb-7">
-            <h1 className="text-center md:text-sm">Backend Developer</h1>
+            <h1 className="text-center text-text-primary md:text-sm">Backend Developer</h1>
           </div>
           <div className="grid grid-cols-2 gap-3 ">
             {dataskill.backend.map((item, index) => (
@@ -69,7 +69,7 @@ export default function Skill() {
         </div>
         <div className="w-full md:h-[280px] p-6 h-auto bg-bg-primary border-stroke-btn rounded-2xl">
           <div className="mb-7">
-            <h1 className="text-center md:text-sm">Other Tech</h1>
+            <h1 className="text-center text-text-primary md:text-sm">Other Tech</h1>
           </div>
           <div className="grid grid-cols-2 gap-3 ">
             {dataskill.other_tech.map((item, index) => (

@@ -11,6 +11,14 @@ import icProgress from "@/public/ic_progress.png";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 export default function About() {
+  const handleDownloadResume = () =>{
+    const link = document.createElement("a");
+    link.href = "/cv.pdf"; // Path to your resume file in the public folder
+    link.download = "cv.pdf"; // Filename for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("75nasrulfahmi@gmail.com").then(
       () => {
@@ -25,7 +33,7 @@ export default function About() {
     );
   };
   return (
-    <div id="about" className="px-5 mt-[100px] mb-[100px]">
+    <div id="about" className="px-5 mt-[100px] mb-[100px] bg-bg-primary ">
       <h1 className="text-3xl font-semibold text-center text-text-primary">
         {dataAbout.title}
       </h1>
@@ -67,22 +75,24 @@ export default function About() {
                 onClick={handleCopyEmail}
               >
                 <Image src={icCopy} alt="" className="w-3" />
-                <p className="text-sm">
+                <p className="text-sm text-text-primary">
                   {dataAbout.card.card_project.cta_email}
                 </p>
               </div>
-              <p className="mt-2 text-sm font-medium">
+              <p className="mt-2 text-sm text-text-secoundary font-medium">
                 {dataAbout.card.card_project.card_project_heading}
               </p>
             </div>
           </div>
           <div className="flex flex-col items-center justify-center col-span-6 row-span-2 py-8 border min-h-10 px-7 bg-bg-primary border-stroke-btn rounded-2xl">
-            <h1 className="mb-3 text-xl font-semibold text-center">
+            <h1 className="mb-3 text-xl font-semibold text-text-primary text-center">
               {dataAbout.card.card_resume.title}
             </h1>
-            <div className="flex items-center justify-center gap-2 p-4 py-3 duration-300 ease-in-out rounded-lg cursor-pointer w-fit bg-btn-secoundary hover:bg-btn-secoundary-hover">
+            <div className="flex items-center justify-center gap-2 p-4 py-3 duration-300 ease-in-out rounded-lg cursor-pointer w-fit bg-btn-secoundary hover:bg-btn-secoundary-hover"
+              onClick={handleDownloadResume}
+            >
               <Image src={imageDownload} alt="" className="w-5" />
-              <p className="text-sm">{dataAbout.card.card_resume.cta_resume}</p>
+              <p className="text-sm text-text-secoundary">{dataAbout.card.card_resume.cta_resume}</p>
             </div>
           </div>
           <div className="flex items-center justify-center col-span-10 row-span-2 gap-10 py-8 border min-h-10 px-7 bg-bg-primary border-stroke-btn rounded-2xl">

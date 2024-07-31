@@ -74,7 +74,7 @@ export default function Hero() {
             <Link href={"#project"}>
               <div className=" w-full px-[1px] py-[1px] bg-gradient-to-br from-gradient-btn-light to-gradient-btn-dark border-1 rounded-lg mt-5 md:max-w-80">
                 <div className="flex items-center justify-center w-full py-3 duration-300 ease-in-out rounded-lg bg-btn-primary md:max-w-80 hover:bg-btn-primary-hover">
-                  <p className="text-sm">{dataHero.cta_project}</p>
+                  <p className="text-sm text-text-secoundary">{dataHero.cta_project}</p>
                   <Image
                     src={iconArrowUp}
                     alt="arrowUp"

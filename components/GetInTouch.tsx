@@ -5,7 +5,7 @@ import { dataContact } from "@/data/contact";
 import Footer from "./Footer";
 export default function GetInTouch() {
   return (
-    <div className="mt-[100px] px-5" id="contact">
+    <div className="mt-[100px] px-5 bg-bg-primary" id="contact">
       <div
         className=""
         style={{
@@ -71,7 +71,7 @@ export default function GetInTouch() {
               ></textarea>
             </div>
             <div className="flex items-center justify-center w-full py-3 duration-300 ease-in-out rounded-lg cursor-pointer bg-btn-primary md:max-w-80 hover:bg-btn-primary-hover">
-              <p>{dataContact.btn_title}</p>
+              <p className="text-text-primary">{dataContact.btn_title}</p>
               <Image src={iconArrowUp} alt="arrowUp" className="w-5 h-auto" />
             </div>
           </div>
