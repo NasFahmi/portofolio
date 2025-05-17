@@ -44,7 +44,7 @@ export default function CardProject({
             <TechPin tech={tech} />
           </div>
           <Link href={githubLink} className="flex items-center justify-center">
-            <p className="text-xs">Github Link</p>
+            <p className="text-xs text-text-primary">Github Link</p>
             <Image src={iconArrowUp} alt="arrowUp" width={12} height={12} />
           </Link>
         </div>

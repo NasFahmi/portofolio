@@ -4,7 +4,8 @@ export const dataAbout = {
   card: {
     card_team: "I prioritize team collaboration, open communication ",
     card_introduction:
-      "I am a Full Stack Developer with extensive experience in building dynamic and responsive web and mobile applications. My expertise includes working with JavaScript frameworks and libraries such as Next.js, Express.js, and React.js, as well as backend development with Laravel. Additionally, I have some experience in mobile app development using Flutter. I am passionate about creating efficient and innovative digital solutions, and I continuously strive to stay updated with the latest technologies and industry best practices.",
+      "I’m a Software Engineering student at Banyuwangi State Polytechnic with 1 year of experience in mobile and web development.",
+    card_introduction_2:" I’ve worked on real projects, enjoy building user-friendly applications, and am familiar with Agile workflows, Trello, and Git. I thrive in team environments and value continuous improvement.",
     card_project: {
       cta_email: "Copy my email address",
       card_project_heading: "Iam Ready to Internship or Project",

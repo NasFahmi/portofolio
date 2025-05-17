@@ -55,7 +55,7 @@ export default function Hero() {
             </Link>
           </div>
           <div className="md:col-span-9">
-            <h1 className="text-center md:text-left">Hello, I am</h1>
+            <h1 className="text-center md:text-left text-text-primary">Hello, I am</h1>
             <h1 className="text-2xl font-bold text-center text-text-primary md:text-left md:text-3xl">
               {dataHero.title}
             </h1>

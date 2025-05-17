@@ -59,8 +59,12 @@ export default function About() {
             </div>
           </div>
           <div className="h-full py-8 border md:col-span-7 md:row-span-4 min-h-10 px-7 bg-bg-primary border-stroke-btn rounded-2xl">
-            <p className="text-sm text-text-primary ">
+            <p className="text-base text-text-primary ">
               {dataAbout.card.card_introduction}
+            </p>
+            <br />
+            <p className="text-base text-text-primary ">
+              {dataAbout.card.card_introduction_2}
             </p>
           </div>
           <div className="relative flex items-center justify-center h-full py-8 border md:col-span-7 md:row-span-3 px-7 min-h-10 bg-bg-primary border-stroke-btn rounded-2xl">

@@ -16,7 +16,7 @@ export default function Project() {
             key={index}
             title={item.title}
             description={item.subtitle}
-            githubLink=""
+            githubLink={item.githubLink}
             imageSrc={item.image}
             tech={item.tech} // Pass the tech array
           />
